@@ -1,48 +1,49 @@
 # UwRI
 
-UwRI es una tienda ficticia de relojes inteligentes creada por **José Conte-Grand** como preentrega del curso de Front End de **Talento Tech**. El objetivo del proyecto es practicar la estructura de una página con HTML y su presentación adaptable con CSS.
+Catálogo ficticio de relojes inteligentes desarrollado por **José Conte-Grand** para la preentrega del curso de **Front End de Talento Tech**. El proyecto está realizado con HTML y CSS y adapta su presentación a distintos tamaños de pantalla.
 
-## Qué incluye
+**Sitio web:** [UwRI en GitHub Pages](https://jlcontegrand.github.io/preentregaTTFrontEnd/)
 
-- Portada, menú y secciones de productos, reseñas y contacto.
-- Catálogo visual de tres relojes con tarjetas, descripciones y precios de ejemplo.
-- Menú de categorías y distribución adaptable a distintos anchos de pantalla.
-- Reseñas ficticias y formulario de contacto.
+## Contenido
 
-El sitio es una **demostración académica**: los productos, precios y testimonios son simulados. Los botones «Agregar al carrito» son parte de la interfaz y todavía no implementan un carrito ni procesan compras.
+- Portada y navegación a las secciones de productos, reseñas y contacto.
+- Tres tarjetas de productos con imágenes, descripciones y precios de ejemplo.
+- Menú de categorías y distribución adaptable para escritorio, tabletas y celulares.
+- Reseñas de muestra y formulario de contacto con campos obligatorios.
 
-## Demo en línea
+## Tecnologías utilizadas
 
-[Ver UwRI en GitHub Pages](https://jlcontegrand.github.io/preentregaTTFrontEnd/) — disponible una vez habilitada la publicación desde la rama `main` y la carpeta `/(root)`.
+- **HTML5:** estructura de la página y formulario.
+- **CSS3:** estilos, variables de color, Flexbox y media queries.
+- **Google Fonts (Asap)** y **Material Symbols:** tipografía e ícono de las reseñas.
 
-## Tecnologías
+## Cómo ver el proyecto localmente
 
-- **HTML5** para la estructura y los formularios.
-- **CSS3** para estilos, variables de color, Flexbox y media queries.
-- **Google Fonts (Asap)** y **Material Symbols** para la tipografía y el ícono de las reseñas.
+1. Descargá el repositorio o clonalo:
 
-## Cómo abrir el proyecto
+   ```bash
+   git clone https://github.com/jlcontegrand/preentregaTTFrontEnd.git
+   ```
 
-1. Descargá el repositorio o clonalo con `git clone https://github.com/jlcontegrand/preentregaTTFrontEnd.git`.
 2. Abrí `index.html` en un navegador.
 
-No se requiere instalar dependencias ni ejecutar un servidor para ver la página. La fuente y el ícono externos necesitan conexión a internet para cargarse.
+No es necesario instalar paquetes ni iniciar un servidor. La fuente y el ícono externos requieren conexión a internet.
 
-## Estructura principal
+## Estructura del proyecto
 
 ```text
-├── index.html          # Contenido de la página
+├── index.html          # Página principal
 ├── css/
 │   └── style.css       # Estilos y reglas responsivas
 ├── assets/
-│   └── img/            # Imágenes del sitio
-└── README.md           # Documentación del proyecto
+│   └── img/            # Imágenes utilizadas
+└── README.md           # Información del proyecto
 ```
 
-## Formulario de contacto
+## Alcance de la preentrega
 
-El formulario está preparado para enviar datos mediante Formspree, pero en `index.html` el atributo `action` todavía contiene `TU_ID`. Para habilitar el envío, hay que crear un formulario en Formspree y reemplazar ese valor por el identificador real del endpoint. Hasta entonces, el formulario no recibe mensajes.
+UwRI es una **maqueta académica**: los precios, las reseñas y la experiencia de compra son simulados. Los botones «Agregar al carrito» no realizan compras. El formulario incluye validación básica del navegador, pero su envío por Formspree requiere reemplazar `TU_ID` en `index.html` por el ID real del formulario.
 
 ## Autor
 
-**José Conte-Grand** · Preentrega de Front End, Talento Tech.
+**José Conte-Grand** · Curso de Front End, Talento Tech.

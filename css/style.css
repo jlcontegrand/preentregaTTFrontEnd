@@ -125,7 +125,7 @@ main {
     text-align: center;
     }
 }
-#product{
+#productos{
     display: flex;
     flex-wrap: wrap;
     padding-top: 1rem;
@@ -287,14 +287,14 @@ main {
 
 /* Dos tarjetas por fila cuando tres dejan de entrar cómodamente. */
 @media screen and (max-width: 950px) {
-    #product .tarjeta-producto {
+    #productos .tarjeta-producto {
         width: calc((100% - 1rem) / 2);
     }
 }
 
 /* La categoría y el modelo se apilan dentro de cada tarjeta. */
 @media screen and (max-width: 810px) {
-    #product .product-content .marca-modelo {
+    #productos .product-content .marca-modelo {
         flex-direction: column;
         align-items: center;
     }
@@ -364,16 +364,16 @@ main {
         flex-direction: column;
     }
 
-    #product {
+    #productos {
         flex-direction: column;
         align-items: center;
     }
 
-    #product .tarjeta-producto {
+    #productos .tarjeta-producto {
         width: 100%;
     }
 
-    #product .product-content .descripcion-producto {
+    #productos .product-content .descripcion-producto {
         text-align: center;
     }
 }
