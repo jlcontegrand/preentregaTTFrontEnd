@@ -29,7 +29,7 @@
 
     <main>
         <h2>Los mejores relojes inteligentes</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, porro.</p>
+        <p>Encontrá un reloj para acompañarte en cada momento del día.</p>
     </main>
 
     <div class="contenedor-tienda">
@@ -57,7 +57,7 @@
                                 <h4 class="nombre-producto">Nike Series 6</h4>
                             </div>
 
-                            <p class="descripcion-producto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, iste?</p>
+                            <p class="descripcion-producto">Un diseño liviano para entrenar y seguir conectado.</p>
 
                             <p class="precio-producto">
                                 Precio
@@ -80,7 +80,7 @@
                                 <h4 class="nombre-producto">Foreruner 170</h4>
                             </div>
 
-                            <p class="descripcion-producto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, iste?</p>
+                            <p class="descripcion-producto">Pensado para registrar tus recorridos y alcanzar nuevas metas.</p>
 
                             <p class="precio-producto">
                                 Precio
@@ -104,7 +104,7 @@
                                 <h4 class="nombre-producto">Watch 7</h4>
                             </div>
 
-                            <p class="descripcion-producto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, iste?</p>
+                            <p class="descripcion-producto">Seguí tu actividad y consultá tus avisos desde la muñeca.</p>
 
                             <p class="precio-producto">
                                 Precio
@@ -127,40 +127,65 @@
             <div class="devolucion">
                 <div class="datos">
                     <span class="material-symbols-outlined">person</span>
-                    <span>Nombre Apellido</span>
+                    <span>Claudia Diaz</span>
                 </div>    
 
-                <p class="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro exercitationem labore esse quibusdam! Necessitatibus, ea.</p>
+                <p class="contenido">Es cómodo para usar todos los días y pude configurarlo en pocos minutos.</p>
             </div>
 
             <div class="devolucion">
                 <div class="datos">
                     <span class="material-symbols-outlined">person</span>
-                    <span>Nombre Apellido</span>
+                    <span>Juan Pérez</span>
                 </div>    
 
-                <p class="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro exercitationem labore esse quibusdam! Necessitatibus, ea.</p>
+                <p class="contenido">Lo uso para salir a caminar y tener mis datos a mano. La pantalla se lee muy bien.</p>
             </div>
 
             <div class="devolucion">
                 <div class="datos">
                     <span class="material-symbols-outlined">person</span>
-                    <span>Nombre Apellido</span>
+                    <span>Domingo Domingues</span>
                 </div>    
 
-                <p class="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro exercitationem labore esse quibusdam! Necessitatibus, ea.</p>
+                <p class="contenido">Me gustó el diseño y encontré rápido la información que buscaba.</p>
             </div>
         </section>
 
         <section id="contacto">
             <h1>Contacto</h1>
-            <div>
-                
-            </div>
+
+            <form action="https://formspree.io/f/TU_ID" method="POST">
+                <fieldset class="formulario">
+                    <legend>Formulario de contacto: tu consulta será respondida a la brevedad</legend>
+
+                    <div class="datos">
+                        <div class="nombre">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="email">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                    </div>
+                    <div class="mensaje">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                        <button class="boton-enviar" type="submit">Enviar</button>
+                    </div>
+
+                </fieldset>
+            </form>
         </section>
     </div>
     
-    <div class="final-web"></div>
+    <footer class="final-web">
+        <p>UwRI · Sitio creado por José Conte-Grand para la preentrega del curso de Front End de Talento Tech.</p>
+        <a href="#contacto">Contacto</a>
+    </footer>
 
 </body>
 </html>

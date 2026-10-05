@@ -14,8 +14,9 @@
     --tarjeta: #ffffff;
     --texto: #19343c;
     --azul-principal: #014f6d;
-    --terroso: #d0904f;
+    --terroso: #ead6be;
     --positivo: #3f805a;
+    --verde-suave: #e9f1ea;
 
     --family-font: "Asap", sans-serif;
 }
@@ -26,6 +27,7 @@ html {
 
 body {
     background-color: var(--fondo);
+    color: var(--texto);
 }
 
 .logo {
@@ -71,7 +73,8 @@ header {
 }
 
 main {
-    height: 200px;
+    min-height: 200px;
+    padding: 1rem;
     border: 2px;
     background-image: url("../assets/img/fondo-main-indicadores-salud.png");
     background-size: cover;
@@ -115,16 +118,22 @@ main {
 }
 
 .catalogo {
+    flex: 1;
+    min-width: 0;
+
     h1 {
     text-align: center;
     }
 }
 #product{
     display: flex;
+    flex-wrap: wrap;
     padding-top: 1rem;
-    gap: 3px;
+    gap: 1rem;
+
 
     .tarjeta-producto{
+        width: calc((100% - 2rem) / 3);
         border: 1px solid;
         padding: 5px;
         text-align: center;
@@ -138,14 +147,15 @@ main {
     }
 
     .imagen-producto{
+        width: 100%;
         height: 100px;
+        object-fit: contain;
     }
 
     .product-content{
         text-align: left;
 
         .marca-modelo{
-            /* display: flex; */
             width: fit-content;
             display: flex;
             margin-inline: auto;
@@ -186,8 +196,8 @@ main {
 #resenias{
 
     padding: 2rem;
-    background-color: var(--positivo);
-    color: #ffffff;
+    background-color: var(--verde-suave);
+    color: var(--texto);
     text-align: center;
 
     h1{padding-bottom:2rem;}
@@ -200,6 +210,8 @@ main {
         color: var(--azul-principal);
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 2rem;
 
         .datos{
             display: flex;
@@ -221,50 +233,66 @@ main {
     background-color: var(--azul-principal);
     color: var(--fondo);
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    h1 {padding: 2rem;}
+
+    .formulario {
+        display: flex;
+        min-width: 0;
+        padding: 3rem;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .datos{
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .mensaje {
+            padding-top: 1rem;
+            display: flex;
+            flex: 1;
+            min-width: 0;
+            align-items: center;
+            flex-direction: column;
+            #mensaje {
+                width: 100%;
+                max-width: 36rem;
+                min-height: 10rem;
+                padding: 0.75rem;
+                resize: vertical;
+            }
+        }
+    }
+
+
     
 }
 
-.final-web{
-    padding: 0.1rem;
+.final-web {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--texto);
+    color: var(--fondo);
 }
 
-/* muestra las tarjetas o espacios acomodados en filas, en columnas */
-@media screen and (max-width: 580px) {
+.final-web a {
+    color: inherit;
+}
 
-    header{
-        flex-direction: column;
-    }
-
-    .compras{
-        flex-direction: column;
-    }
-
-    .menu-lateral{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%
-    }
-
-    #product {
-        flex-direction: column;
-        align-items: center;
-        .product-content .descripcion-producto {
-            text-align: center;
-        }
+/* Dos tarjetas por fila cuando tres dejan de entrar cómodamente. */
+@media screen and (max-width: 950px) {
+    #product .tarjeta-producto {
+        width: calc((100% - 1rem) / 2);
     }
 }
 
-/* Hace que no se superponga al imagen de fondo del main con el titulo */
-@media screen and (max-width: 675px) {
-    main {
-        background-size: 900px auto;
-        background-position: center;
-    }
-}
-
-/* Ordena el contenido de las tarjetas cuando se achica la pantalla */
+/* La categoría y el modelo se apilan dentro de cada tarjeta. */
 @media screen and (max-width: 810px) {
     #product .product-content .marca-modelo {
         flex-direction: column;
@@ -272,16 +300,81 @@ main {
     }
 }
 
-/* controla el desbordamiento en las reseñas */
-@media screen and (max-width: 380px) {
-    #resenias .devolucion  {
+/* El menú pasa arriba del catálogo y el formulario se apila. */
+@media screen and (max-width: 700px) {
+    .compras {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        margin: 0 0 1rem;
+    }
+
+    #contacto .formulario {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+    }
+
+    #contacto .formulario .datos {
+        padding: 0;
+        align-items: stretch;
+    }
+
+    #contacto .formulario .mensaje,
+    #contacto input {
+        width: 100%;
+    }
+}
+
+/* El fondo del main se recorta sin achicarse más. */
+@media screen and (max-width: 675px) {
+    main {
+        background-size: 900px auto;
+        background-position: center;
+    }
+}
+
+/* En las reseñas, el autor queda arriba del texto. */
+@media screen and (max-width: 600px) {
+    #resenias {
+        padding: 1rem;
+    }
+
+    #resenias .devolucion {
         flex-direction: column;
         justify-content: center;
-
+        margin: 1rem 0;
+        padding: 0.75rem;
     }
 
     #resenias .devolucion .contenido {
-        padding: 0px;
+        padding-left: 0;
+    }
+}
+
+/* Una tarjeta por fila y encabezado apilado en pantallas pequeñas. */
+@media screen and (max-width: 580px) {
+    header {
+        flex-direction: column;
+    }
+
+    #product {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #product .tarjeta-producto {
+        width: 100%;
+    }
+
+    #product .product-content .descripcion-producto {
+        text-align: center;
     }
 }
 
